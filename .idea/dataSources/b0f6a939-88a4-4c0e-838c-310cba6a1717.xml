@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="test">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="cloud_study"/>
+    <schema id="3" name="db_blog"/>
+    <schema id="4" name="employees"/>
+    <schema id="5" name="information_schema"/>
+    <schema id="6" name="mysql"/>
+    <schema id="7" name="performance_schema"/>
+    <schema id="8" name="sakila"/>
+    <table id="9" parent="1" name="Blog"/>
+    <table id="10" parent="1" name="UserBalance"/>
+    <table id="11" parent="1" name="t"/>
+    <table id="12" parent="1" name="User"/>
+    <column id="13" parent="9" name="blogId">
+      <comment>博客Id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="14" parent="9" name="blogTitle">
+      <comment>博客标题</comment>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="15" parent="9" name="blogContent">
+      <comment>博客内容</comment>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="16" parent="9" name="PRIMARY">
+      <columns>blogId</columns>
+      <primary>1</primary>
+    </key>
+    <column id="17" parent="10" name="userId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="18" parent="10" name="userName">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="19" parent="10" name="balance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="20" parent="11" name="a">
+      <data-type>int(4) unsigned zerofill|0</data-type>
+    </column>
+    <column id="21" parent="11" name="b">
+      <data-type>int(10) unsigned|0</data-type>
+    </column>
+    <column id="22" parent="12" name="userId">
+      <comment>用户Id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="23" parent="12" name="userName">
+      <comment>用户名称</comment>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="24" parent="12" name="userPassword">
+      <comment>用户密码</comment>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="25" parent="12" name="PRIMARY">
+      <columns>userId</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
